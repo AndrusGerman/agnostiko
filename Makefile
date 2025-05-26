@@ -42,12 +42,10 @@ logs:
 update:
 	@echo "Performing rolling update..."
 	kubectl set image deployment/akka-hello-world akka-hello-world=$(REGISTRY)/akka-hello-world:2.0 -n $(NAMESPACE)
-	kubectl set image deployment/java-webapp java-webapp=$(REGISTRY)/java-webapp:1.0 -n $(NAMESPACE)
 
 rollback:
 	@echo "Rolling back deployments..."
 	kubectl rollout undo deployment/akka-hello-world -n $(NAMESPACE)
-	kubectl rollout undo deployment/java-webapp -n $(NAMESPACE)
 
 cleanup:
 	@echo "Cleaning up resources..."

@@ -121,13 +121,13 @@ If you prefer to run the commands manually, follow these steps:
 To view logs for each application:
 
 ```bash
-# App1 logs
+# akka-hello-world logs
 kubectl logs -f deployment/akka-hello-world -n multi-app
 ```
 ![Akka HTTP Logs](img/logs-akka-hello-world.png)
 
 ```bash
-# App2 logs
+# java-webapp logs
 kubectl logs -f deployment/java-webapp -n multi-app
 ```
 ![Java Webapp Logs](img/logs-java-webapp.png)
